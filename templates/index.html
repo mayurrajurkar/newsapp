@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body style="background-color: rgb(173, 163, 173);">
+      <div>
+          <center><h1 style="background-color: rgb(116, 116, 165) ; color: rgb(24, 33, 41); margin: 0%; padding-bottom: 8px;">News App</h1>
+          </center>
+        
+      </div>
+      <div class="container">
+          {% for i in case.article %}
+          <div style="color:rgb(2, 2, 2)" class="container">
+            <br>
+            <h4> <STRong style="color: rgb(59, 38, 34);">Auther :</STRong>  {{i.author}}</h4>
+            <h4> <STRong style="color: rgb(59, 38, 34);">Title :</STRong>  {{i.title}}</h4>
+            <h4> <STRong style="color: rgb(59, 38, 34);">Description :</STRong>  {{i.description}}</h4>
+            <br>
+            <img src= {{i.urlToImage}} width="100%" height="300" alt="">
+          </div>
+          <br>
+
+          {% endfor %}
+      </div>
+
+      <div>
+        <center><h4 style="background-color: rgb(116, 116, 165) ; color: rgb(24, 33, 41); margin: 0%; padding-bottom: 8px;">Copyright &copy : 2022 Newsapp</h4>
+        </center>
+      
+    </div>
+
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
